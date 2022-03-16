@@ -8,23 +8,31 @@ const SideBar = () => {
   return (
     <section
       className={clsx(
-        "w-full h-full fixed top-0 bg-white lg:hidden z-20",
-        "transition-all duration-300 ease-linear",
-        { "-translate-x-full": !isSideBarOpen },
-        { "translate-x-0": isSideBarOpen }
+        " bg-gray-900/20 fixed w-full h-full top-0 left-0 transition duration-150 flex",
+        { "z-40 opacity-100": isSideBarOpen },
+        { "-z-10 opacity-0": !isSideBarOpen }
       )}
     >
-      <Container>
-        <div>
-          <header className="flex justify-between items-center">
-            <Logo />
-            <CloseButton click={() => closeSideBar()} />
-          </header>
-          <section className="py-5 px-10">
-            <Links />
-          </section>
-        </div>
-      </Container>
+      <div
+        className={clsx(
+          "bg-white lg:hidden w-72 h-full  transition-all duration-300 ease-linear",
+          { "-translate-x-full": !isSideBarOpen },
+          { "translate-x-0": isSideBarOpen }
+        )}
+      >
+        <Container>
+          <div>
+            <header className="flex justify-between items-center">
+              <Logo />
+              <CloseButton click={() => closeSideBar()} />
+            </header>
+            <div className="py-5 px-10">
+              <Links />
+            </div>
+          </div>
+        </Container>
+      </div>
+      <div className=" bg-transparent flex-grow" onClick={closeSideBar}></div>
     </section>
   );
 };
