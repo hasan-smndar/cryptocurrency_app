@@ -6,7 +6,7 @@ const Pagination = ({ setPagination, page, next, prev, len }) => {
     <div>
       <div className="flex justify-center space-x-2">
         <button
-          click={prev}
+          onClick={prev}
           disabled={parseInt(page) === 1}
           className="hover:bg-yellow-200 rounded-full w-10 h-10 grid justify-center items-center border border-yellow-900 disabled:bg-gray-300 disabled:border-0"
         >
@@ -30,7 +30,7 @@ const Pagination = ({ setPagination, page, next, prev, len }) => {
           );
         })}
         <button
-          click={next}
+          onClick={next}
           disabled={parseInt(page) === len}
           className="hover:bg-yellow-200 rounded-full w-10 h-10 grid justify-center items-center border border-yellow-900  disabled:bg-gray-300 disabled:border-0"
         >
