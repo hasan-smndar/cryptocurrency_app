@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  font-family: "Inter", sans-serif;
+}
+.discription > a {
+  color: #1d4ed8;
+}
+.discription > a:hover {
+  color: #2563eb;
+}
+@media screen and (max-width: 340px) {
+  .header-crypto {
+    display: block;
+  }
+  .header-crypto > *:not(:last-child) {
+    padding-bottom: 10px;
+  }
+}
+/* .section2 {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+.section {
+  margin: auto;
+} */
