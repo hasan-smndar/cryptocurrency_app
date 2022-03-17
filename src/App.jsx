@@ -12,7 +12,7 @@ const App = () => {
         <Header />
         <SideBar />
         <main className=" section2 lg:flex">
-          <section className=" w-72 hidden  h-screen lg:block lg:relative  ">
+          <section className="w-72 hidden  h-screen lg:block lg:relative  ">
             <Navigation />
           </section>
           <section className="section flex-1 overflow-hidden">

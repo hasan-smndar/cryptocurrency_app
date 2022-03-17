@@ -25,7 +25,7 @@ const Card = ({ id, name, image, list }) => {
                 key={index}
                 text={item.title}
                 value={item.number}
-                prenstage={index > 2}
+                prenstage={index > 1}
               />
             );
           })}
