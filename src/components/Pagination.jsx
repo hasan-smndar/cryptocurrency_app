@@ -8,7 +8,7 @@ const Pagination = ({ setPagination, page, next, prev, len }) => {
         <button
           onClick={prev}
           disabled={parseInt(page) === 1}
-          className="hover:bg-yellow-200 rounded-full w-10 h-10 grid justify-center items-center border border-yellow-900 disabled:bg-gray-300 disabled:border-0"
+          className="hover:bg-yellow-200 rounded-full w-10 h-10 grid justify-center items-center border border-yellow-900 disabled:bg-yellow-200/90 disabled:border-0"
         >
           <AiOutlineLeft />
         </button>
